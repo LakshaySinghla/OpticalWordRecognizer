@@ -121,53 +121,53 @@ def get_characters(raw_image, max_line_height, line, word):
 		#resize height to 28 pixels
 		#we need three different conditions to work well with the aspect ratios
 		if(o_height>o_width): # height greater than width
-			# aspectRatio = o_width / (o_height*1.0)
-			# height = 26
-			# width = int(height * aspectRatio)
-			# letter = cv2.resize(letter, (width,height))
-			# #add border which results adding of padding
-			# remaining_pixels_w = abs(32 - letter.shape[1])
-			# add_left = int(remaining_pixels_w / 2)
-			# add_right = int(remaining_pixels_w - add_left)
-			# letter = cv2.copyMakeBorder(letter, 0, 0, add_left, add_right, cv2.BORDER_CONSTANT, value=(0,0,0))
-			# remaining_pixels_h = abs(32 - letter.shape[0])
-			# add_top = int(remaining_pixels_h / 2)
-			# add_bottom = int(remaining_pixels_h - add_top)
-			# letter = cv2.copyMakeBorder(letter, add_top, add_bottom, 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
+			aspectRatio = o_width / (o_height*1.0)
+			height = 26
+			width = int(height * aspectRatio)
+			letter = cv2.resize(letter, (width,height))
+			#add border which results adding of padding
+			remaining_pixels_w = abs(32 - letter.shape[1])
+			add_left = int(remaining_pixels_w / 2)
+			add_right = int(remaining_pixels_w - add_left)
+			letter = cv2.copyMakeBorder(letter, 0, 0, add_left, add_right, cv2.BORDER_CONSTANT, value=(0,0,0))
+			remaining_pixels_h = abs(32 - letter.shape[0])
+			add_top = int(remaining_pixels_h / 2)
+			add_bottom = int(remaining_pixels_h - add_top)
+			letter = cv2.copyMakeBorder(letter, add_top, add_bottom, 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
 			
-			letter = cv2.resize(letter,(32,32))
+			# letter = cv2.resize(letter,(32,32))
 			# =================
 			
 		elif(o_width>o_height): # width greater than height
-			# aspectRatio = o_height / (o_width*1.0)
-			# width = 26
-			# height = int(width * aspectRatio)
-			# letter = cv2.resize(letter, (width,height))
-			# #add border which results adding of padding
-			# remaining_pixels_w = abs(32 - letter.shape[1])
-			# add_left = int(remaining_pixels_w / 2)
-			# add_right = int(remaining_pixels_w - add_left)
-			# letter = cv2.copyMakeBorder(letter, 0, 0, int(add_left), int(add_right), cv2.BORDER_CONSTANT, value=(0,0,0))
-			# remaining_pixels_h = abs(32 - letter.shape[0])
-			# add_top = int(remaining_pixels_h / 2)
-			# add_bottom = int(remaining_pixels_h - add_top)
-			# letter = cv2.copyMakeBorder(letter, int(add_top), int(add_bottom), 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
+			aspectRatio = o_height / (o_width*1.0)
+			width = 26
+			height = int(width * aspectRatio)
+			letter = cv2.resize(letter, (width,height))
+			#add border which results adding of padding
+			remaining_pixels_w = abs(32 - letter.shape[1])
+			add_left = int(remaining_pixels_w / 2)
+			add_right = int(remaining_pixels_w - add_left)
+			letter = cv2.copyMakeBorder(letter, 0, 0, int(add_left), int(add_right), cv2.BORDER_CONSTANT, value=(0,0,0))
+			remaining_pixels_h = abs(32 - letter.shape[0])
+			add_top = int(remaining_pixels_h / 2)
+			add_bottom = int(remaining_pixels_h - add_top)
+			letter = cv2.copyMakeBorder(letter, int(add_top), int(add_bottom), 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
 
-			letter = cv2.resize(letter,(32,32))
+			# letter = cv2.resize(letter,(32,32))
 			# =================
 		
 		else: # both height and width equal
-			# letter = cv2.resize(letter, (26,26))
-			# #add border which results adding of padding
-			# remaining_pixels_w = abs(32 - letter.shape[1])
-			# add_left = int(remaining_pixels_w / 2)
-			# add_right = int(remaining_pixels_w - add_left)
-			# letter = cv2.copyMakeBorder(letter, 0, 0, int(add_left), int(add_right), cv2.BORDER_CONSTANT, value=(0,0,0))
-			# remaining_pixels_h = abs(32 - letter.shape[0])
-			# add_top = int(remaining_pixels_h / 2)
-			# add_bottom = int(remaining_pixels_h - add_top)
-			# letter = cv2.copyMakeBorder(letter, int(add_top), int(add_bottom), 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
-			letter = cv2.resize(letter,(32,32))
+			letter = cv2.resize(letter, (26,26))
+			#add border which results adding of padding
+			remaining_pixels_w = abs(32 - letter.shape[1])
+			add_left = int(remaining_pixels_w / 2)
+			add_right = int(remaining_pixels_w - add_left)
+			letter = cv2.copyMakeBorder(letter, 0, 0, int(add_left), int(add_right), cv2.BORDER_CONSTANT, value=(0,0,0))
+			remaining_pixels_h = abs(32 - letter.shape[0])
+			add_top = int(remaining_pixels_h / 2)
+			add_bottom = int(remaining_pixels_h - add_top)
+			letter = cv2.copyMakeBorder(letter, int(add_top), int(add_bottom), 0, 0, cv2.BORDER_CONSTANT, value=(0,0,0))
+			# letter = cv2.resize(letter,(32,32))
 
 			# =================
 		
